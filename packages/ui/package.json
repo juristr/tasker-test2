@@ -12,7 +12,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "vitest"
+    "test": "vitest --watch=false"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.3",
