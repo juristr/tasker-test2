@@ -28,10 +28,10 @@ jobs:
         run: |
           pnpm format:check
           pnpm lint
-          pnpm --filter "@tasker/web" build
-          pnpm --filter "@tasker/*" test
+          pnpm nx run-many -t build test
       - name: Run Playwright tests
-        run: pnpm --filter "@tasker/e2e-web" e2e
+        # run: pnpm --filter "@tasker/e2e-web" e2e
+        run: pnpm nx e2e @tasker/e2e-web
       - uses: actions/upload-artifact@v4
         if: always()
         with:
