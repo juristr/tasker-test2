@@ -15,6 +15,7 @@ module.exports = [
       '**/postcss.config.js',
       'packages/database/scripts/seed.ts',
       'packages/database/src/db.ts',
+      '.nx',
     ],
   },
   {
