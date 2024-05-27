@@ -19,7 +19,7 @@
       "dependsOn": ["build"]
     }
   },
-  "cachebust": "1",
+  "cachebust": "2",
   "defaultBase": "main",
   "nxCloudAccessToken": "NDA5MDNjZjctZWRmZS00NTA5LThhOWYtMjg4MWRmNDkzMjI2fHJlYWQtd3JpdGU=",
   "plugins": [
