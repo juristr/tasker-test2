@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: lts/*
       - name: 'Start Nx Cloud run'
-        run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="e2e"
+        run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="e2e-ci"
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -24,8 +24,8 @@ jobs:
           run_install: false
       - name: Install dependencies
         run: pnpm install
-      - name: Install Playwright Browsers
-        run: pnpm --filter "@tasker/e2e-web" exec playwright install --with-deps
+      # - name: Install Playwright Browsers
+      #   run: pnpm --filter "@tasker/e2e-web" exec playwright install --with-deps
       - name: Run Checks/Lint/Build/Test/e2e
         run: |
           pnpm format:check
