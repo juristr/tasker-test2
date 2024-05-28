@@ -19,5 +19,15 @@
       "dependsOn": ["build"]
     }
   },
-  "defaultBase": "main"
+  "cachebust": "3",
+  "defaultBase": "main",
+  "nxCloudAccessToken": "NDA5MDNjZjctZWRmZS00NTA5LThhOWYtMjg4MWRmNDkzMjI2fHJlYWQtd3JpdGU=",
+  "plugins": [
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "playwright:e2e"
+      }
+    }
+  ]
 }
